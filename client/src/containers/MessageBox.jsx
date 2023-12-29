@@ -1,9 +1,11 @@
 import Message from "../components/Message";
 
-const MessageBox = () => {
+const MessageBox = ({ messages }) => {
   return (
     <div className="messages-container">
-      <Message />
+      {messages.map((message, index) => (
+        <Message key={index} message={message} />
+      ))}
     </div>
   );
 };

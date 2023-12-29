@@ -4,19 +4,19 @@ svg {
 
 .container {
   width: 800px;
+
   margin: 120px auto;
 
   display: grid;
   grid-template-columns: 1fr 1.4fr;
+  overflow-x: visible;
 }
 
 .chatbar {
-  width: 100%;
-  max-width: 280px;
+  max-height: 450px;
   background-color: blueviolet;
   padding: 30px;
   overflow-x: visible;
-  overflow-y: auto;
 }
 
 .logo-section {
@@ -25,7 +25,9 @@ svg {
 
   & h1,
   p {
+    color: rgb(231, 230, 230);
     margin: 0;
+    user-select: none;
   }
 
   & h1 {
@@ -42,6 +44,8 @@ svg {
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .buddy {
@@ -51,6 +55,9 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 3px;
+  user-select: none;
+  width: 100%;
+  overflow-x: visible;
 }
 
 .user {
@@ -121,6 +128,7 @@ svg {
   width: fit-content;
   border-radius: 10px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .message-input {
@@ -145,6 +153,8 @@ svg {
   & svg {
     width: 30px;
     height: 100%;
+    color: white;
+    cursor: pointer;
   }
 }
 
