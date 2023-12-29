@@ -1,4 +1,3 @@
-
 svg {
   width: 24px;
 }
@@ -9,7 +8,6 @@ svg {
 
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  
 }
 
 .chatbar {
@@ -17,13 +15,16 @@ svg {
   max-width: 280px;
   background-color: blueviolet;
   padding: 30px;
+  overflow-x: visible;
+  overflow-y: auto;
 }
 
 .logo-section {
   display: flex;
   flex-direction: column;
 
-  & h1, p {
+  & h1,
+  p {
     margin: 0;
   }
 
@@ -69,7 +70,6 @@ svg {
   & p {
     font-weight: 700;
   }
-
 }
 
 .chat-section {
@@ -86,16 +86,12 @@ svg {
   /* padding: 20px; */
   border-radius: 15px;
   display: flex;
-  
 }
 
-.incoming, 
+.incoming,
 .outgoing {
   width: 100%;
-
 }
-
-
 
 .incoming {
   display: flex;
@@ -104,6 +100,7 @@ svg {
 
   & p {
     background-color: rgb(78, 78, 252);
+    color: rgb(226, 226, 226);
   }
 }
 
@@ -113,8 +110,8 @@ svg {
   margin-left: 20px;
 
   & p {
-    background-color: rgb(245,245,245);
-    color: rgb(71,71,71);
+    background-color: rgb(245, 245, 245);
+    color: rgb(71, 71, 71);
   }
 }
 
@@ -130,7 +127,6 @@ svg {
   display: flex;
   align-items: center;
   max-width: 100%;
-
 
   & input {
     width: 100%;
@@ -158,4 +154,10 @@ svg {
   align-items: center;
   padding: 5px;
   background-color: blueviolet;
+}
+
+.active {
+  transform: translateX(30px);
+  background-color: aqua;
+  color: blueviolet;
 }
