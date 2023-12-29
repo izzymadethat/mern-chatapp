@@ -1,14 +1,11 @@
 import "./App.css";
-import ChatSection from "./containers/ChatSection";
-import Chatbar from "./containers/Chatbar";
+import Register from "./pages/Register";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="container">
-      <Chatbar />
-      <ChatSection />
-    </div>
-  );
+  axios.defaults.baseURL = "http://localhost:4000";
+  axios.defaults.withCredentials = true;
+  return <Register />;
 }
 
 export default App;
